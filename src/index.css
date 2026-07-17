@@ -586,6 +586,48 @@ button {
   }
 }
 
+/* Mobile hero — cinematic media block above stacked content (≤768px).
+   Desktop full-bleed layout above is untouched by this breakpoint. */
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    display: block;
+    overflow: visible;
+  }
+
+  .hero__media {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    min-height: 230px;
+    max-height: 42svh;
+    overflow: hidden;
+  }
+
+  .hero__video {
+    object-position: 72% center;
+  }
+
+  .hero__overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(7, 7, 7, 0.1) 0%,
+      rgba(7, 7, 7, 0.3) 68%,
+      var(--bg-primary) 100%
+    );
+  }
+
+  .hero__content {
+    position: static;
+    padding: 28px var(--container-padding) 40px;
+  }
+
+  .hero__scroll-indicator {
+    display: none;
+  }
+}
+
 /* ==========================================================================
    Services / featured cards
    ========================================================================== */
